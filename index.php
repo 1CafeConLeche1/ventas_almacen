@@ -1,81 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Ventas Almacen|Iniciar sesión 	</title>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-	<link rel="stylesheet" type="text/css" href="css/styles_login.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style_index.css">
+    <title>Ventas Almacen | Iniciar Sesión</title>
 </head>
 
 <body>
-	<div class="container">
-		<div class="d-flex justify-content-center h-100">
-			<div class="card">
-				<div class="card-header">
-					<h3>Iniciar sesión</h3>
-				</div>
-				<div class="card-body">
-					<form id="formlog">
-						<div class="input-group form-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
-							</div>
-							<input type="text"  id="Uname" name="Uname" name="Uname" class="form-control" autocomplete="off" placeholder="Usuario">
-						</div>
-						<div class="input-group form-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
-							</div>
-							<input type="password" id="Pass" name="Pass" name="Pass" class="form-control" autocomplete="off" placeholder="Contraseña">
-						</div>
-						<div class="form-group">
-							<span  name="log" id="log" class="btn float-left login_btn">Iniciar sesión
-						</div>
-					</form>
-				</div>
-				<div class="card-footer">
-					<div class="d-flex justify-content-center links">
-						¿No tienes cuenta?<a href="vistas/usuario/registro.php">Regístrate</a>
-					</div>>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="login-reg-panel">
+        <div class="login-info-box">
+            <h2>¿Ya tienes una cuenta?</h2>
+            <p>¿Qué hace aquí entonces?</p>
+            <label id="label-register" for="log-reg-show">Iniciar sesión</label>
+            <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+        </div>
+
+        <div class="register-info-box">
+            <h2>¿No tienes cuenta?</h2>
+            <p>Crea tu cuenta acá</p>
+            <label id="label-login" for="log-login-show">Registrar</label>
+            <input type="radio" name="active-log-panel" id="log-login-show">
+        </div>
+
+        <div class="white-panel">
+            <form id="formlog">
+                <div class="login-show">
+                    <h2>Inicia sesión</h2>
+                    <input type="text" id="Uname" name="Uname" placeholder="Correo Electrónico" autocomplete="off">
+                    <input type="password" id="Pass" name="Pass" placeholder="Contraseña" autocomplete="off">
+                    <input id="log" name="log" type="button" value="Iniciar sesión" autocomplete="off">
+                </div>
+            </form>
+            <form id="formreg">
+                <div class="register-show">
+                    <h2>Crea tu nuevo usuario</h2>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" autocomplete="off">
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido" autocomplete="off">
+                    <input type="text" id="email" name="email" placeholder="Correo Electrónico" autocomplete="off">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" autocomplete="off">
+                    <input id="register" name="register" type="button" value="Crear cuenta">
+            </form>
+        </div>
+    </div>
+    </div>
 </body>
 
 </html>
-<script type="text/javascript">
-	$(document).ready(function() {
+<script>
+    $(document).ready(function() {
+        $('.login-info-box').fadeOut();
+        $('.login-show').addClass('show-log-panel');
+    });
 
-			$('#log').click(function(e) {
-				e.preventDefault();
-				datos = $('#formlog').serialize();
-				$.ajax({
-					type: "POST",
-					data: datos,
-					url: "procesos/paglogin/login.php",
 
-					success: function(r) {
-						console.log(r);
-						if (r == 1) {
-							window.location = "vistas/dashboard/inicio.php";
-						} else {
-							alert("Tas mamending");
-						}
-					}
-				})
+    $('.login-reg-panel input[type="radio"]').on('change', function() {
+        if ($('#log-login-show').is(':checked')) {
+            $('.register-info-box').fadeOut();
+            $('.login-info-box').fadeIn();
 
-			})
-		}
+            $('.white-panel').addClass('right-log');
+            $('.register-show').addClass('show-log-panel');
+            $('.login-show').removeClass('show-log-panel');
 
-	)
+        } else if ($('#log-reg-show').is(':checked')) {
+            $('.register-info-box').fadeIn();
+            $('.login-info-box').fadeOut();
+
+            $('.white-panel').removeClass('right-log');
+
+            $('.login-show').addClass('show-log-panel');
+            $('.register-show').removeClass('show-log-panel');
+        }
+    });
+    $(document).ready(function(e) {
+            $('#register').click(function(e) {
+                datos = $('#formreg').serialize();
+                $.ajax({
+                    type: "POST",
+                    data: datos,
+                    url: "procesos/paglogin/reglog.php",
+                    success: function(r) {
+                        console.log(r);
+                        if (r == 1) {
+                            alert("Agregado con exito");
+                        } else {
+                            alert("Hubo un error al agregar");
+                        }
+                    }
+                })
+
+            })
+        }
+
+    )
+    $(document).ready(function() {
+
+            $('#log').click(function(e) {
+                e.preventDefault();
+                datos = $('#formlog').serialize();
+                $.ajax({
+                    type: "POST",
+                    data: datos,
+                    url: "procesos/paglogin/login.php",
+
+                    success: function(r) {
+                        console.log(r);
+                        if (r == 1) {
+                            window.location = "vistas/dashboard/inicio.php";
+                        } else {
+                            alert("Tas mamending");
+                        }
+                    }
+                })
+
+            })
+        }
+
+    )
 </script>
