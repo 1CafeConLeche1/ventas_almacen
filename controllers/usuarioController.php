@@ -57,7 +57,7 @@ class usuarioController
             $usuario->setEmail($_POST['email']);
             $usuario->setPassword($_POST['password']);
 
-            /*$identity = $usuario->login();
+            $identity = $usuario->login();
 
             if ($identity && is_object($identity)) {
                 $_SESSION['identity'] = $identity;
@@ -67,7 +67,7 @@ class usuarioController
                 }
             } else {
                 $_SESSION['error_login'] = 'Identificación fallida!!';
-            } */
+            }
         }
 
         header("location:" . base_url);
