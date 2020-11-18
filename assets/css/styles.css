@@ -1,0 +1,389 @@
+
+
+/*GENERALES*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+body {
+background-color: rgb(197, 194, 194);
+}
+
+
+a {
+    color: royalblue;
+}
+
+a:visited {
+    color: royalblue;
+}
+
+a:hover {
+    color: #555555;
+}
+
+.alert_green {
+    color: green;
+}
+
+.alert_red {
+    color: red;
+}
+
+/*CONTAINER*/
+
+#container {
+    margin: 0px auto;
+    width: 80%;
+    box-shadow: 0px opx 10px grey;
+    background: white;
+
+}
+
+/* HEADER*/
+
+#header {
+    width: 100%;
+    height: 145px;
+    background: #f0f0f0;
+}
+
+#logo a {
+    float: left;
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-family: 'Open Sans', Helvetica, Arial;
+    text-transform: uppercase;
+    color: royalblue;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-left: 25px;
+    text-shadow: 0px 2px 1px #222222;
+    transition: all 300ms;
+}
+
+#logo a:hover {
+    text-shadow: 0px 2px 1px #222222, 0px 0px 4px royalblue;
+}
+
+#logo {
+    padding: 20px;
+    margin-left: 20px;
+    float: left;
+
+}
+
+#logo img {
+    height: 75px;
+    float: left;
+}
+
+/* MENU*/
+
+#menu {
+    clear: both;
+    background: #222;
+    color: white;
+    height: 55px;
+    border-bottom: 4px solid royalblue;
+}
+
+#menu ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    margin-left: 25px;
+}
+
+#menu ul li {
+    line-height: 55px;
+    float: left;
+    border-right: 1px solid #363636;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    transition: all 300ms;
+}
+
+#menu a:first-child {
+    border-left: 1px solid #363636;
+}
+
+#menu a:hover {
+    background: royalblue;
+}
+
+/*CONTENT*/
+
+#content {
+    margin: 0px auto;
+    overflow: hidden;
+    background: white;
+}
+
+/* BARRA LATERAL*/
+
+#lateral {
+    width: 22%;
+    min-height: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+
+}
+
+#lateral .block_aside {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+#lateral h3 {
+    display: block;
+    color: #222;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #e1e1e1;
+    border-bottom: 2px solid royalblue;
+}
+
+#lateral ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lateral ul li {
+    list-style: square;
+    margin-left: 20px;
+}
+
+
+/*FORMS*/
+
+label,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: white;
+    padding: 2px;
+    color: grey;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border: 1px solid #0d238873;
+    color: black;
+
+}
+
+input[type="button"],
+input[type="submit"],
+button,
+.button {
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: #245488;
+    border: 1px solid #11608E;
+    cursor: pointer;
+}
+
+.button {
+    background: #33AE3D;
+    color: white !important;
+    text-decoration: none;
+}
+
+
+label,
+input[type="button"],
+input[type="submit"],
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+/*CENTRAL*/
+
+#central {
+    width: 70%;
+    float: right;
+    border-left: 1px solid #ccc;
+    box-shadow: -5px -1px 5px #ddd;
+    padding: 15px;
+    min-height: 500px;
+}
+
+#central h1 {
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 5px;
+
+}
+
+/*PRODUCTOS*/
+
+.product {
+    width: 30%;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product img {
+    width: 210px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+#footer {
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222;
+    border-top: 4px solid #01B1EA;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: rgb(112, 107, 107);
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
