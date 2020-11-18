@@ -12,7 +12,7 @@ if (isset($_SESSION['register']) && $_SESSION['register'] == 'Complete') : ?>
 
 <?php Utils::deleteSession('register'); ?>
 
-<form action="<?base_url?>usuario/guardar" method="POST">
+<form action="<?=base_url?>usuario/guardar" method="POST">
     <label for="nombre">Nombre</label>
     <input type="text" name="nombre" required>
 
@@ -21,6 +21,9 @@ if (isset($_SESSION['register']) && $_SESSION['register'] == 'Complete') : ?>
 
     <label for="email" name="email">Correo Electrónico</label>
     <input type="email" name="email" required>
+
+    <label for="password" name="password">Contraseña</label>
+    <input type="password" name="password" required>
 
     <input type="submit" value="Crear cuenta">
 </form>
