@@ -9,7 +9,7 @@
 }
 
 body {
-background-color: rgb(197, 194, 194);
+background-color: rgb(197, 194, 197);
 }
 
 
@@ -38,7 +38,7 @@ a:hover {
 #container {
     margin: 0px auto;
     width: 80%;
-    box-shadow: 0px opx 10px grey;
+    box-shadow: 0px opx 10px rgb(128, 128, 128);
     background: white;
 
 }
@@ -369,9 +369,6 @@ button {
   clear: both;
 }
 
-
-
-
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
@@ -386,4 +383,76 @@ button {
     float: none;
     width: 100%;
   }
+}
+#pepe{
+    text-shadow: 2px 2px 5px black;
+}
+ #user{
+    font-size: 24px;
+    color: lightskyblue;
+ }
+ #email{
+     color: darkred;
+ }
+ #pass{
+     color: lightgreen;
+ }
+ /* primera */
+ .card {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.705);
+    max-width: 250px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    float: left;
+    width: 100%;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+/*  segunda  */
+.card-2{
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.705);
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    float: right;
+    width: 100%;
+}
+.precio{
+    color: grey;
+    font-size: 22px;
+}
+.card-2 button{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+.card-2 button:hover{
+    opacity: 0.7;
 }

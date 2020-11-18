@@ -1,4 +1,4 @@
-<h1>Crea una cuenta</h1>
+<h1 id="pepe">Crea una cuenta</h1>
 
 <?php
 if (isset($_SESSION['register']) && $_SESSION['register'] == 'Complete') : ?>
@@ -12,18 +12,18 @@ if (isset($_SESSION['register']) && $_SESSION['register'] == 'Complete') : ?>
 
 <?php Utils::deleteSession('register'); ?>
 
-<form action="<?=base_url?>usuario/guardar" method="POST">
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" required>
+<form action="<?= base_url ?>usuario/guardar" method="POST">
+    <label for="nombre"><b>Nombre</b> <i id="user" class="fa fa-user"></i></label>
+    <input type="text" name="nombre" placeholder="Nombre" autocomplete="off" required>
 
-    <label for="apellidos" name="apellidos">Apellidos</label>
-    <input type="text" name="apellidos" required>
+    <label for="apellidos" name="apellidos"><b>Apellidos</b> <i id="user" class="fa fa-user"></i></label>
+    <input type="text" name="apellidos" placeholder="Apellidos" autocomplete="off" required>
 
-    <label for="email" name="email">Correo Electrónico</label>
-    <input type="email" name="email" required>
+    <label for="email" name="email"><b>Correo Electrónico</b> <i id="email" class="material-icons">email</i></label>
+    <input type="email" name="email" placeholder="Email" autocomplete="off" required>
 
-    <label for="password" name="password">Contraseña</label>
-    <input type="password" name="password" required>
+    <label for="password" name="password"><b>Contraseña</b> <i id="pass" class="material-icons">beenhere</i></label>
+    <input type="password" name="password" placeholder="Contraseña" autocomplete="off" required>
 
     <input type="submit" value="Crear cuenta">
 </form>

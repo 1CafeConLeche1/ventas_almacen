@@ -1,8 +1,8 @@
 <aside id="lateral">
   <form action="<?= base_url ?>usuario/login" method="POST">
-    <div id="login" class="container">
+    <div>
       <?php if (!isset($_SESSION['identity'])) : ?>
-        <h1>Iniciar Sesión</h1>
+        <h2>Iniciar Sesión</h2>
         <p>Completa todos los espacios.</p>
         <hr>
         <label for="email"><b>Correo Electrónico</b></label>
