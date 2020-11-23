@@ -12,6 +12,7 @@
                 <input type="submit" value="Enviar">
             </form>
         <?php else :  ?>
+            <img src="<?=base_url?>assets/img/icon-user.png" alt="user">
             <h3><?= $_SESSION['identity']->nombre ?> <?= $_SESSION['identity']->apellidos ?></h3>
         <?php endif; ?>
         <ul>
