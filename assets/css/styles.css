@@ -308,6 +308,7 @@ button {
     font-family: arial;
     float: left;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.123);
   }
   
   .price {
@@ -320,7 +321,7 @@ button {
     outline: 0;
     padding: 12px;
     color: white;
-    background-color:rgba(0, 0, 0, 0.753);
+    background-color:rgba(243, 160, 7, 0.753);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -339,6 +340,7 @@ button {
     font-family: arial;
     float: right;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.123);
 }
 .precio{
     color: grey;
@@ -349,7 +351,7 @@ button {
     outline: 0;
     padding: 12px;
     color: white;
-    background-color:rgba(0, 0, 0, 0.753);
+    background-color:rgba(243, 160, 7, 0.753);
     text-align: center;
     cursor: pointer;
     width: 100%;

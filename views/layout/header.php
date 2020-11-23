@@ -17,6 +17,7 @@
 </head>
 
 <body>
+</audio>
     <div id="container">
         <!-- CABECERA-->
         <header id="header">
