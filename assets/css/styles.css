@@ -1,5 +1,3 @@
-
-
 /*GENERALES*/
 
 * {
@@ -9,7 +7,7 @@
 }
 
 body {
-background-color: rgb(197, 194, 197);
+    background: url(../img/bg.png);
 }
 
 
@@ -33,12 +31,24 @@ a:hover {
     color: red;
 }
 
+table {
+    text-align: center;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+td {
+    border-top: 1px solid #555;
+    padding: 2px;
+
+}
+
 /*CONTAINER*/
 
 #container {
     margin: 0px auto;
     width: 80%;
-    box-shadow: 0px opx 10px rgb(128, 128, 128);
+    box-shadow: 0px opx 10px grey;
     background: white;
 
 }
@@ -57,28 +67,28 @@ a:hover {
     letter-spacing: 4px;
     font-family: 'Open Sans', Helvetica, Arial;
     text-transform: uppercase;
-    color: royalblue;
+    color: rgb(255, 123, 0);
     font-weight: bold;
     text-decoration: none;
     margin-top: 25px;
     margin-left: 25px;
-    text-shadow: 0px 2px 1px #222222;
-    transition: all 300ms;
+    text-shadow: 0px 5px 7px #000000;
+    transition: all 100ms;
 }
 
 #logo a:hover {
-    text-shadow: 0px 2px 1px #222222, 0px 0px 4px royalblue;
+    text-shadow: 0px 2px 1px #222222, 0px 0px 4px rgb(0, 0, 0);
 }
 
 #logo {
-    padding: 20px;
+    padding: 35px;
     margin-left: 20px;
     float: left;
 
 }
 
 #logo img {
-    height: 75px;
+    height: 90px;
     float: left;
 }
 
@@ -86,30 +96,30 @@ a:hover {
 
 #menu {
     clear: both;
-    background: #222;
+    background: rgb(3, 3, 3);
     color: white;
     height: 55px;
-    border-bottom: 4px solid royalblue;
+    border-bottom: 2px solid rgb(236, 140, 15);
 }
 
 #menu ul {
     list-style: none;
     text-decoration: none;
     margin: 0px auto;
-    margin-left: 25px;
+    margin-left: 0px;
 }
 
 #menu ul li {
     line-height: 55px;
     float: left;
-    border-right: 1px solid #363636;
+    border-right: 0.2px solid #fd6602;
 }
 
 #menu a {
     color: white;
     text-decoration: none;
     display: block;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding-left: 12px;
     padding-right: 12px;
@@ -117,11 +127,11 @@ a:hover {
 }
 
 #menu a:first-child {
-    border-left: 1px solid #363636;
+    border-left: 1px solid #ff0000;
 }
 
 #menu a:hover {
-    background: royalblue;
+    background: rgb(236, 116, 3);
 }
 
 /*CONTENT*/
@@ -129,13 +139,13 @@ a:hover {
 #content {
     margin: 0px auto;
     overflow: hidden;
-    background: white;
+    background: rgb(255, 255, 255);
 }
 
 /* BARRA LATERAL*/
 
 #lateral {
-    width: 22%;
+    width: 25%;
     min-height: 500px;
     float: left;
     margin-top: 20px;
@@ -147,12 +157,12 @@ a:hover {
     display: block;
     width: 90%;
     margin: 5px auto;
-    padding: 10px;
+    padding: 12px;
 }
 
 #lateral h3 {
     display: block;
-    color: #222;
+    color: rgb(0, 0, 0);
     width: 100%;
     text-align: center;
     padding-top: 2px;
@@ -160,8 +170,8 @@ a:hover {
     margin-bottom: 15px;
     font-size: 16px;
     font-weight: bold;
-    background: #e1e1e1;
-    border-bottom: 2px solid royalblue;
+    background: transparent;
+    border-bottom: 2px solid rgb(255, 81, 0);
 }
 
 #lateral ul {
@@ -173,15 +183,27 @@ a:hover {
     list-style: square;
     margin-left: 20px;
 }
-
+#lateral img{
+    height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
 
 /*FORMS*/
+.form_container {
+    width: 50%;
+}
+
 
 label,
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+input[type="number"],
+select,
+textarea {
     display: block;
     width: 95%;
     margin-top: 2px;
@@ -191,7 +213,9 @@ select {
 input[type="text"],
 input[type="password"],
 input[type="email"],
-select {
+input[type="number"],
+select,
+textarea {
     border: 1px solid #c9c9c9;
     box-shadow: 0px 0px 2px #ccc inset;
     background: white;
@@ -204,7 +228,7 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus {
     border: 1px solid #0d238873;
-    color: black;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -228,6 +252,12 @@ button,
     background: #33AE3D;
     color: white !important;
     text-decoration: none;
+}
+
+.button-small {
+    width: 120px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 
@@ -264,139 +294,6 @@ button {
 
 /*PRODUCTOS*/
 
-.product {
-    width: 30%;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-}
-
-.product h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.product img {
-    width: 210px;
-    margin-bottom: 10px;
-}
-
-.product p {
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* FOOTER */
-
-#footer {
-    clear: both;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    background: #222;
-    border-top: 4px solid #01B1EA;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: rgb(112, 107, 107);
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-#pepe{
-    text-shadow: 2px 2px 5px black;
-}
- #user{
-    font-size: 24px;
-    color: lightskyblue;
- }
- #email{
-     color: darkred;
- }
- #pass{
-     color: lightgreen;
- }
  /* primera */
  .card {
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.705);
@@ -455,4 +352,28 @@ button {
 }
 .card-2 button:hover{
     opacity: 0.7;
+}
+
+/* FOOTER */
+
+#footer {
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222;
+    border-top: 4px solid #01B1EA;
+}
+#pepillo{
+    text-shadow: 0 2px 3px #080808;
+}
+#miniuser{
+    color: orangered;
+}
+#miniemail{
+    color: blue;
+}
+#minikey{
+    color: gold;
 }

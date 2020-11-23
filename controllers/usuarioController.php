@@ -50,9 +50,7 @@ class usuarioController
     public function login()
     {
         if (isset($_POST)) {
-            //Identificar al usuario
-
-            //Consultar en la db
+            
             $usuario = new Usuario();
             $usuario->setEmail($_POST['email']);
             $usuario->setPassword($_POST['password']);
