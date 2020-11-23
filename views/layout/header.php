@@ -28,7 +28,7 @@
         <nav id="menu">
             <ul>
                 <li>
-                    <a href="<?= base_url ?>producto/index">Inicio</a>
+                    <a href="<?= base_url ?>">Inicio</a>
                 </li>
                 <?php while ($cat = $categorias->fetch_object()) : ?>
                     <li>

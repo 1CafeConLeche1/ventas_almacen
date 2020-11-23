@@ -1,4 +1,4 @@
-<h1 id="pepillo">Crea tu cuenta</h1>
+<img id="usereg" src="<?=base_url?>assets/img/register-user.png" alt="reg">
 
 <?php
 if (isset($_SESSION['register']) && $_SESSION['register'] == 'Complete') : ?>

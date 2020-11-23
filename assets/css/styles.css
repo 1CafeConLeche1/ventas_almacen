@@ -8,6 +8,8 @@
 
 body {
     background: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -58,7 +60,7 @@ td {
 #header {
     width: 100%;
     height: 145px;
-    background: #f0f0f0;
+    background-image: url(../img/bg.png);
 }
 
 #logo a {
@@ -72,7 +74,7 @@ td {
     text-decoration: none;
     margin-top: 25px;
     margin-left: 25px;
-    text-shadow: 0px 5px 7px #000000;
+    text-shadow: 0px 5px 7px #746f6f;
     transition: all 100ms;
 }
 
@@ -96,10 +98,12 @@ td {
 
 #menu {
     clear: both;
-    background: rgb(3, 3, 3);
+    background: #8a8989;
     color: white;
     height: 55px;
-    border-bottom: 2px solid rgb(236, 140, 15);
+    border-bottom: 2px solid #8a8989;
+    background-image: url(../img/bw.png);
+    
 }
 
 #menu ul {
@@ -112,14 +116,14 @@ td {
 #menu ul li {
     line-height: 55px;
     float: left;
-    border-right: 0.2px solid #fd6602;
+    border-right: 0.2px solid #8a8989;
 }
 
 #menu a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     display: block;
-    color: rgb(255, 255, 255);
+    color: rgb(10, 10, 10);
     text-decoration: none;
     padding-left: 12px;
     padding-right: 12px;
@@ -127,7 +131,7 @@ td {
 }
 
 #menu a:first-child {
-    border-left: 1px solid #ff0000;
+    border-left: 1px solid #8a8989;
 }
 
 #menu a:hover {
@@ -139,7 +143,8 @@ td {
 #content {
     margin: 0px auto;
     overflow: hidden;
-    background: rgb(255, 255, 255);
+    background-image: url(../img/bw.png);
+    box-shadow: 0 4px 40px 0 rgba(194, 63, 3, 0.705);
 }
 
 /* BARRA LATERAL*/
@@ -243,8 +248,8 @@ button,
     padding-left: 10px;
     padding-right: 10px;
     color: white;
-    background: #245488;
-    border: 1px solid #11608E;
+    background: #f1721c;
+    border: 1px solid #000000;
     cursor: pointer;
 }
 
@@ -296,7 +301,7 @@ button {
 
  /* primera */
  .card {
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.705);
+    box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.986);
     max-width: 250px;
     margin: auto;
     text-align: center;
@@ -315,7 +320,7 @@ button {
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color:rgba(0, 0, 0, 0.753);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -327,7 +332,7 @@ button {
   }
 /*  segunda  */
 .card-2{
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.705);
+    box-shadow: 0 4px 40px 0 rgb(0, 0, 0);
     max-width: 200px;
     margin: auto;
     text-align: center;
@@ -344,7 +349,7 @@ button {
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color:rgba(0, 0, 0, 0.753);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -363,7 +368,7 @@ button {
     padding-bottom: 10px;
     color: white;
     background: #222;
-    border-top: 4px solid #01B1EA;
+    border-top: 4px solid #ffffff;
 }
 #pepillo{
     text-shadow: 0 2px 3px #080808;
@@ -376,4 +381,11 @@ button {
 }
 #minikey{
     color: gold;
+}
+#usereg{
+    height: 120px;
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+    width: 20%;
 }
