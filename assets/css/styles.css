@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url(../img/bg.png);
+    background: url(../img/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -60,7 +60,9 @@ td {
 #header {
     width: 100%;
     height: 145px;
-    background-image: url(../img/bg.png);
+    background-image: url(../img/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #logo a {
@@ -99,10 +101,10 @@ td {
 #menu {
     clear: both;
     background: #8a8989;
-    color: white;
+    color: rgb(247, 239, 239);
     height: 55px;
     border-bottom: 2px solid #8a8989;
-    background-image: url(../img/bw.png);
+    background-image: url(../img/bw.jpg);
     
 }
 
@@ -141,16 +143,16 @@ td {
 /*CONTENT*/
 
 #content {
-    margin: 0px auto;
+    margin: 0px;
     overflow: hidden;
-    background-image: url(../img/bw.png);
-    box-shadow: 0 4px 40px 0 rgba(194, 63, 3, 0.705);
+    background-image: url(../img/bw.jpg);
+    box-shadow: 0 4px 40px 0 rgb(253, 104, 5);
 }
 
 /* BARRA LATERAL*/
 
 #lateral {
-    width: 25%;
+    width: 29%;
     min-height: 500px;
     float: left;
     margin-top: 20px;
@@ -201,6 +203,7 @@ td {
     width: 50%;
 }
 
+/*register*/
 
 label,
 input[type="text"],
@@ -210,31 +213,9 @@ input[type="number"],
 select,
 textarea {
     display: block;
-    width: 95%;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
-    border: 1px solid #c9c9c9;
-    box-shadow: 0px 0px 2px #ccc inset;
-    background: white;
-    padding: 2px;
-    color: grey;
-    transition: all 300ms;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus {
-    border: 1px solid #0d238873;
-    color: rgb(0, 0, 0);
-
+    width: 80%;
+    margin-top: 1px;
+    margin-bottom: 4px;
 }
 
 input[type="button"],

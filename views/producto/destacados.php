@@ -1,8 +1,8 @@
 <div class="card">
   <img src="assets/img/mobo.png" alt="mobo" style="width:100%">
-  <h2>Motherboard económica</h2>
+  <h2>Memoria SSD M.2</h2>
   <p class="price">$19.99</p>
-  <p>Nueva motherboard que le sirve cualquier microprocesador</p>
+  <p>La memoria más recomendada</p>
   <p><button>Comprar Artículo</button></p>
 </div>
 

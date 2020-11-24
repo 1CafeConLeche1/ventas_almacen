@@ -24,6 +24,9 @@
         </select>
 
         <label for="imagen">Imagen</label>
+        <?php if (isset($prod) && is_object($prod) && !empty($prod->imagen)) : ?>
+         <img src="<?=base_url?>uploads/images/<?=$prod->imagen?>" class="thumb"/> 
+        <?php endif; ?>
         <input type="file" name="imagen">
 
         <input type="submit" value="Guardar">
