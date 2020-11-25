@@ -12,22 +12,22 @@
 <div class="form_container">
     <form action="<?= base_url ?>producto/save" method="POST" enctype="multipart/form-data">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" autocomplete="off">
+        <input autocomplete="off" type="text" name="nombre" value="<?= isset($prod) && is_object($prod) ? $prod->nombre : ''; ?> ">
 
         <label for="descripcion">Descripcion</label>
-        <textarea name="descripcion" autocomplete="off"></textarea>
+        <textarea name="descripcion"><?= isset($prod) && is_object($prod) ? $prod->descripcion : ''; ?> </textarea>
 
         <label for="stock">Stock</label>
-        <input type="number" name="stock" autocomplete="off">
+        <input type="number" name="stock" value="<?= isset($prod) && is_object($prod) ? $prod->stock : ''; ?> "/>
 
         <label for="precio">Precio</label>
-        <input type="text" name="precio" autocomplete="off">
+        <input autocomplete="off" type="text" name="precio" value="<?= isset($prod) && is_object($prod) ? $prod->precio : ''; ?> "/>
 
         <label for="categoria">Categoria</label>
         <?php $categorias = Utils::showCategorias(); ?>
         <select name="categoria">
             <?php while ($cat = $categorias->fetch_object()) : ?>
-                <option value="<?= $cat->id ?>">
+                <option value="<?= $cat->id ?>" <?= isset($prod) && is_object($prod) && $cat->id == $prod->categoria_id ? 'selected' : ''; ?> ">
                     <?= $cat->nombre ?>
                 </option>
             <?php endwhile; ?>

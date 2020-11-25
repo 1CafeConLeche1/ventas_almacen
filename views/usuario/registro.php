@@ -1,4 +1,4 @@
-<img id="usereg" src="<?=base_url?>assets/img/register-user.png" alt="reg">
+<img id="usereg" src="<?=base_url?>assets/img/png/register-user.png" alt="reg">
 
 <?php
 if (isset($_SESSION['register']) && $_SESSION['register'] == 'Complete') : ?>

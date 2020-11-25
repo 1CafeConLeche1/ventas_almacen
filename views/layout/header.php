@@ -22,7 +22,7 @@
         <!-- CABECERA-->
         <header id="header">
             <div id="logo">
-                <img src="<?= base_url ?>assets/img/titulo.png" alt="Carrito Logo" />
+                <img src="<?= base_url ?>assets/img/png/titulo.png" alt="Carrito Logo" />
                 <a href="index.php">
                     Ventas Almacén
                 </a>
@@ -38,7 +38,7 @@
                 </li>
                 <?php while ($cat = $categorias->fetch_object()) : ?>
                     <li>
-                        <a href="<?=base_url?>"><?= $cat->nombre ?></a>
+                    <a href="<?=base_url?>categoria/ver&id=<?=$cat->id?>"><?=$cat->nombre?></a>
                     </li>
                 <?php endwhile; ?>
             </ul>

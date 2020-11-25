@@ -1,8 +1,8 @@
 <aside id="lateral">
     <div id="login" class="block_aside">
-
+    <div class="userinfo">
+    <img src="<?=base_url?>assets/img/png/img_avatar.png" alt="avatar">
         <?php if (!isset($_SESSION['identity'])) : ?>
-            <img src="<?=base_url?>assets/img/icon-user.png" alt="user">
             <h3>Inicia sesión en Ventas Almacén</h3>
             <form action="<?= base_url ?>usuario/login" method="POST">
                 <label for="email">Email</label>
@@ -12,9 +12,9 @@
                 <input type="submit" value="Enviar">
             </form>
         <?php else :  ?>
-            <img src="<?=base_url?>assets/img/icon-user.png" alt="user">
             <h3><?= $_SESSION['identity']->nombre ?> <?= $_SESSION['identity']->apellidos ?></h3>
         <?php endif; ?>
+        <div class="containeruser">
         <ul>
             <?php if (isset($_SESSION['admin'])) :  ?>
                 <li><a href="<?= base_url ?>categoria/index">Gestionar Categorías</a>
@@ -37,6 +37,8 @@
                 </li>
             <?php endif; ?>
         </ul>
+        </div>
+        </div>
     </div>
 </aside>
 
