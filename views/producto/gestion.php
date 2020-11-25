@@ -1,6 +1,6 @@
 <h1>Gestion de Artículos de Ventas Almacén</h1>
 
-<a href="<?= base_url ?>producto/crear" class="button button-small">Crear producto</a>
+<a href="<?= base_url ?>producto/crear" class="button button-small">Añadir producto</a>
 
 <?php if (isset($_SESSION['producto']) && $_SESSION['producto'] == 'complete') : ?>
     <strong class="alert_green">El producto se ha creado correctamente</strong>
@@ -25,6 +25,7 @@
         <th>Nombre</th>
         <th>Precio</th>
         <th>Stock</th>
+        <th>Acciones</th>
     </tr>
     <?php while ($prod = $productos->fetch_object()) : ?>
         <tr>
@@ -39,6 +40,10 @@
             </td>
             <td>
                 <?= $prod->stock; ?>
+            </td>
+            <td>
+                <a href="<?= base_url ?>producto/editar&id=<?= $prod->id ?>" class="button button-gestion">Editar</a>
+                <a href="<?= base_url ?>producto/eliminar&id=<?= $prod->id ?>" class="button button-gestion button-red">Eliminar</a>
             </td>
         </tr>
     <?php endwhile; ?>

@@ -1,15 +1,15 @@
-<div class="card">
-  <img src="assets/img/mobo.png" alt="mobo" style="width:100%">
-  <h2>Memoria SSD M.2</h2>
-  <p class="price">$19.99</p>
-  <p>La memoria más recomendada</p>
-  <p><button>Comprar Artículo</button></p>
-</div>
+<h1>Productos destacados</h1>
 
-<div class="card-2">
-<img src="assets/img/DDR4.png" alt="ram" style="width: 100%;">
-<h2>Rams DDR4</h2>
-<p class="precio">$5.99</p>
-<p>Rams pishudicimas DDR4</p>
-<p><button>Comprar Artículo</button></p>
-</div>
+<?php while ($prod = $productos->fetch_object()) : ?>
+
+  <div class="card">
+    <?php if ($prod->imagen != null) : ?>
+      <img src="<?= base_url ?>uploads/images/<?= $prod->imagen ?>">
+    <?php else : ?>
+      <img src="assets/img/defecto.png">
+    <?php endif; ?>
+    <h3><?= $prod->nombre ?></h3>
+    <p><?= $prod->precio ?></p>
+    <p><button>Comprar Artículo</button></p>
+  </div>
+<?php endwhile; ?>
