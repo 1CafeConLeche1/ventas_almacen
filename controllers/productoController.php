@@ -4,11 +4,18 @@ require_once 'models/Producto.php';
 class productoController{
 
     public function destacados(){
-        
         $producto = new Producto();
         $productos = $producto->getRandom();
         require_once 'views/producto/destacados.php';
         
+    }
+    public function ver(){
+        if (isset($_GET['id'])){
+            $producto = new Producto();
+            $producto->setId($_GET['id']);
+            $prod = $producto->getOne();
+        }
+        require_once 'views/producto/ver.php';
     }
 
     public function gestion()

@@ -4,24 +4,24 @@
     $url_action = base_url . 'producto/save&id=' . $prod->id;
     ?>
 <?php else : ?>
-    <h1>Crear nuevos productos</h1>
-    <?php
+<h1>Crear nuevos productos</h1>
+<?php
     $url_action = base_url . 'producto/save';
     ?>
-<?php endif; ?>
+    <?php endif; ?>
 <div class="form_container">
-    <form action="<?= base_url ?>producto/save" method="POST" enctype="multipart/form-data">
-        <label for="nombre">Nombre</label>
-        <input autocomplete="off" type="text" name="nombre" value="<?= isset($prod) && is_object($prod) ? $prod->nombre : ''; ?> ">
+     <form action="<?= $url_action ?>" method="POST" enctype="multipart/form-data">  
+     <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" autocomplete="off" value="<?= isset($prod) && is_object($prod) ? $prod->nombre : ''; ?> ">
 
         <label for="descripcion">Descripcion</label>
-        <textarea name="descripcion"><?= isset($prod) && is_object($prod) ? $prod->descripcion : ''; ?> </textarea>
+        <textarea name="descripcion" autocomplete="off"><?= isset($prod) && is_object($prod) ? $prod->descripcion : ''; ?> </textarea>
 
         <label for="stock">Stock</label>
-        <input type="number" name="stock" value="<?= isset($prod) && is_object($prod) ? $prod->stock : ''; ?> "/>
+        <input type="number" name="stock"  autocomplete="off" value="<?= isset($prod) && is_object($prod) ? $prod->stock : ''; ?> "/>
 
         <label for="precio">Precio</label>
-        <input autocomplete="off" type="text" name="precio" value="<?= isset($prod) && is_object($prod) ? $prod->precio : ''; ?> "/>
+        <input type="text" name="precio" autocomplete="off" value="<?= isset($prod) && is_object($prod) ? $prod->precio : ''; ?> ">
 
         <label for="categoria">Categoria</label>
         <?php $categorias = Utils::showCategorias(); ?>
@@ -35,11 +35,11 @@
 
         <label for="imagen">Imagen</label>
         <?php if (isset($prod) && is_object($prod) && !empty($prod->imagen)) : ?>
-            <img src="<?= base_url ?>uploads/images/<?= $prod->imagen ?>" class="thumb" />
+         <img src="<?=base_url?>uploads/images/<?=$prod->imagen?>" class="thumb"/> 
         <?php endif; ?>
         <input type="file" name="imagen">
 
-        <input type="submit" value="Guardar">
+        <input type="submit" value="Guardar"> 
 
     </form>
 </div>
