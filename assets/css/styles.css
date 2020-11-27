@@ -10,6 +10,7 @@ body {
     background: url(../img/jpg/bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border: black;
 }
 
 
@@ -36,11 +37,12 @@ a:hover {
 table {
     text-align: center;
     width: 100%;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
 }
 
 td {
-    border-top: 1px solid #555;
+    border-top: 1px solid rgb(0, 0, 0);
     padding: 2px;
 
 }
@@ -52,7 +54,7 @@ td {
 
 #container {
     margin: 0px auto;
-    width: 80%;
+    width: 85%;
     box-shadow: 0px opx 10px grey;
     background: white;
 
@@ -63,9 +65,10 @@ td {
 #header {
     width: 100%;
     height: 145px;
-    background-image: url(../img/jpg/bg2.jpg);
+    background-image: url(../img/fondoventa.gif);
     background-size: cover;
     background-repeat: no-repeat;
+    border: black;
 }
 
 #logo a {
@@ -106,8 +109,8 @@ td {
     background: #8a8989;
     color: rgb(247, 239, 239);
     height: 55px;
-    border-bottom: 2px solid #8a8989;
-    background-image: url(../img/png/bw.png);
+    border-bottom: 2px solid #000000;
+    background-image: url(../img/jpg/bw.png);
     
 }
 
@@ -136,7 +139,7 @@ td {
 }
 
 #menu a:first-child {
-    border-left: 1px solid #8a8989;
+    border-left: 1px solid #000000;
 }
 
 #menu a:hover {
@@ -146,9 +149,8 @@ td {
 /*CONTENT*/
 
 #content {
-    margin: 0px;
     overflow: hidden;
-    background-image: url(../img/png/bw.png);
+    background-image: url(../img/jpg/bw.png);
     box-shadow: 0 4px 40px 0 rgb(253, 104, 5);
 }
 
@@ -181,7 +183,7 @@ td {
     font-size: 16px;
     font-weight: bold;
     background: transparent;
-    border-bottom: 2px solid rgb(255, 81, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 #lateral ul {
@@ -326,6 +328,8 @@ button {
     margin-bottom: 10px;
 }
 
+
+
   .card button {
     border: none;
     outline: 0;
@@ -420,4 +424,36 @@ button {
     margin-bottom: 10px;
     font-size: 20px;
     color: #444;
+}
+/*CARRITO*/
+
+.total-carrito{
+    float: right;
+    width: 295px;
+}
+.button-pedido{
+    display: block;
+    float: right;
+    width: 100px;
+}
+
+.total-carrito h3{
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+.img-carrito{
+    display: block;
+    margin: 10px auto;
+    height: 60px;
+}
+.button-red{
+    background: red;
+    display: block;
+    float: right;
+    width: 100px;
+}
+.botones{
+    width: 100%;
+    height: auto;
 }

@@ -1,4 +1,13 @@
 <aside id="lateral">
+<div id="carrito" class="block_aside">
+        <h3><img src="<?=base_url?>assets/img/carrito.png" alt=""> Mi carrito</h3>
+        <ul>
+            <?php $stats = Utils::statsCarrito(); ?>
+            <li><a href="<?= base_url ?>carrito/index">Productos (<?=$stats['count']?>)</a> </li>
+            <li><a href="<?= base_url ?>carrito/index">Total: $<?=$stats['total']?></a> </li>
+            <li><a href="<?= base_url ?>carrito/index">Ver el carrito</a> </li>
+        </ul>
+    </div>
     <div id="login" class="block_aside">
     <div class="userinfo">
     <img src="<?=base_url?>assets/img/png/img_avatar.png" alt="avatar">

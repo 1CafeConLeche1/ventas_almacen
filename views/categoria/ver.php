@@ -8,11 +8,11 @@
                 <?php if ($prod->imagen != null) : ?>
                     <img src="<?= base_url ?>uploads/images/<?= $prod->imagen ?>">
                 <?php else : ?>
-                    <img src="<?=base_url?>assets/img/png/defecto.gif">
+                    <img src="<?=base_url?>assets/img/png/defecto.png">
                 <?php endif; ?>
                 <h3><?= $prod->nombre ?></h3>
                 <p><?= $prod->precio ?></p>
-                <button>Comprar</button>
+                <a href="<?=base_url?>carrito/add" class="button">Comprar</a>
             </div>
         <?php endwhile; ?>
     <?php endif; ?>

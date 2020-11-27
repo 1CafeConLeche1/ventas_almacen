@@ -1,3 +1,5 @@
+<?php
+error_reporting(E_ALL ^ E_NOTICE); ?>
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,13 +23,6 @@
     <div id="container">
         <!-- CABECERA-->
         <header id="header">
-            <div id="logo">
-                <img src="<?= base_url ?>assets/img/png/titulo.png" alt="Carrito Logo" />
-                <a href="index.php">
-                    Ventas Almacén
-                </a>
-
-            </div>
         </header>
         <!-- MENU -->
         <?php $categorias = Utils::showCategorias(); ?>
@@ -36,11 +31,13 @@
                 <li>
                     <a href="<?= base_url ?>">Inicio</a>
                 </li>
+                
                 <?php while ($cat = $categorias->fetch_object()) : ?>
                     <li>
                     <a href="<?=base_url?>categoria/ver&id=<?=$cat->id?>"><?=$cat->nombre?></a>
                     </li>
                 <?php endwhile; ?>
+
             </ul>
         </nav>
 
