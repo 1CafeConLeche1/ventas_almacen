@@ -1,5 +1,7 @@
-<h1>Productos destacados</h1>
-
+<?php if (!isset($_SESSION['identity'])) : ?>
+  <img class="oli" src="<?=base_url?>assets/img/inicia sesión.gif" alt="oli">
+  <?php else : ?>
+    <h1>Productos destacados</h1>
 <?php while ($prod = $productos->fetch_object()) : ?>
 
   <div class="card">
@@ -15,3 +17,4 @@
     <a href="<?=base_url?>/carrito/add&id=<?=$prod->id?>" class="button">Comprar</a>
   </div>
 <?php endwhile; ?>
+    <?php endif;?>

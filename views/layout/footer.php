@@ -5,8 +5,7 @@
 
 <!-- PIE DE PAGINA -->
 <footer id="footer">
-    <p>Desarrollado por Brandon y arreglado por Marlon <sub>muchas veces</sub> &copy; <?= date('Y') ?></p>
-
+    <img id="fu" src="<?=base_url?>assets/img/footer.gif" alt="">
 </footer>
 </div>
 

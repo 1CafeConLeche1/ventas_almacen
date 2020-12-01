@@ -1,6 +1,7 @@
 <aside id="lateral">
+<?php if (isset($_SESSION['identity'])) :  ?>
 <div id="carrito" class="block_aside">
-        <h3><img src="<?=base_url?>assets/img/carrito.png" alt=""> Mi carrito</h3>
+        <h3><img src="<?=base_url?>assets/img/carrito.gif" alt=""> Mi carrito</h3>
         <ul>
             <?php $stats = Utils::statsCarrito(); ?>
             <li><a href="<?= base_url ?>carrito/index">Productos (<?=$stats['count']?>)</a> </li>
@@ -8,9 +9,14 @@
             <li><a href="<?= base_url ?>carrito/index">Ver el carrito</a> </li>
         </ul>
     </div>
+<?php endif; ?>
     <div id="login" class="block_aside">
     <div class="userinfo">
-    <img src="<?=base_url?>assets/img/png/img_avatar.png" alt="avatar">
+    <?php if (!isset($_SESSION['identity'])) : ?>
+    <img src="<?=base_url?>assets/img/png/img_avatar.gif" alt="avatar">
+    <?php else: ?>
+        <img src="<?=base_url?>assets/img/png/img_avatar2.gif" alt="avatar">
+    <?php endif; ?>
         <?php if (!isset($_SESSION['identity'])) : ?>
             <h3>Inicia sesión en Ventas Almacén</h3>
             <form action="<?= base_url ?>usuario/login" method="POST">
