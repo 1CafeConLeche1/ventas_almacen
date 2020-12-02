@@ -26,6 +26,8 @@ error_reporting(E_ALL ^ E_NOTICE); ?>
         </header>
         <!-- MENU -->
         <?php $categorias = Utils::showCategorias(); ?>
+        <?php if (!isset($_SESSION['identity'])) : ?>
+        <?php else:?>
         <nav id="menu">
             <ul>
                 <li>
@@ -40,5 +42,5 @@ error_reporting(E_ALL ^ E_NOTICE); ?>
 
             </ul>
         </nav>
-
+                <?php endif;?>
         <div id="content">

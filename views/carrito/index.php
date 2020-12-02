@@ -1,4 +1,4 @@
-<h1>Carrito de la comprar</h1>
+<h1>Carrito de la compra</h1>
 
 <?php if (isset($_SESSION['carrito']) && count($_SESSION['carrito']) >= 1) : ?>
     <table>
@@ -35,7 +35,7 @@
                     </div>
                 </td>
                 <td>
-                    <a href="<?= base_url ?>carrito/remove&index=<?= $indice ?>" class="button button-carrito button-red">Quitar</a>
+                    <a href="<?= base_url ?>carrito/remove&index=<?= $indice ?>" class="quitarsh">Quitar</a>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -50,7 +50,7 @@
         <h3>Precio total: $<?= $stats['total'] ?></h3>
     </div>
     <div class="pedidu">
-    <a href="" class="button button-pedido">Hacer pedido</a>
+    <a href="<?=base_url?>" class="button button-pedido">Hacer pedido</a>
     </div>
 <?php else : ?>
     <img class="vacioo" src="<?=base_url?>assets/img/carritovacio.gif" alt="">
