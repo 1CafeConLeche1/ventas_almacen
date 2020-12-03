@@ -5,7 +5,7 @@
 
 <!-- PIE DE PAGINA -->
 <footer id="footer">
-    <img id="fu" src="<?=base_url?>assets/img/footer.gif" alt="">
+    <img id="fufu" src="<?=base_url?>assets/img/footer.gif" alt="">
 </footer>
 </div>
 

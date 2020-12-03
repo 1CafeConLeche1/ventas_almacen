@@ -1,7 +1,8 @@
 <?php 
 class pedidoController{
     public function index(){
-        echo "Controlador pedido, Acción index";
+        require_once 'views/producto/pedido.php';
     }
+
 }
 ?>
