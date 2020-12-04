@@ -50,7 +50,7 @@
         <h3>Precio total: $<?= $stats['total'] ?></h3>
     </div>
     <div class="pedidu">
-    <a href="<?=base_url?>" class="button button-pedido">Hacer pedido</a>
+    <a href="<?=base_url?>pedido/hacer" class="button button-pedido">Hacer pedido</a>
     </div>
 <?php else : ?>
     <img class="vacioo" src="<?=base_url?>assets/img/carritovacio.gif" alt="">
